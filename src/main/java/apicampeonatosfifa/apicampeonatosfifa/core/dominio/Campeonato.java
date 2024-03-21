@@ -19,7 +19,7 @@ public class Campeonato {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "secuencia_campeonato")
     @GenericGenerator(name = "secuencia_campeonato", strategy = "increment")
     @Column(name = "id")
-    private int id;
+    private long id;
 
     @Column(name = "campeonato", length = 100, unique = true)
     private String nombre;
@@ -41,11 +41,11 @@ public class Campeonato {
         this.seleccion = seleccion;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

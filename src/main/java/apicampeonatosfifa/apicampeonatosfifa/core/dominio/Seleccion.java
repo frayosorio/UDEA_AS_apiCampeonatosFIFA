@@ -17,7 +17,7 @@ public class Seleccion {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "secuencia_pais")
     @GenericGenerator(name = "secuencia_pais", strategy = "increment")
     @Column(name = "id")
-    private int id;
+    private long id;
 
     @Column(name = "pais")
     private String nombre;
@@ -34,11 +34,11 @@ public class Seleccion {
         this.entidad = entidad;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
